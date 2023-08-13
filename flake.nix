@@ -11,6 +11,9 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
-    packages.${system}.default = (import ./default.nix { inherit pkgs; });
+    packages.${system} = {
+      hyprshot = pkgs.callPackage ./default.nix { };
+      default = self.packages.${system}.hyprshot;
+    };
   };
 }
