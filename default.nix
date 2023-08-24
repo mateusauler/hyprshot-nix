@@ -1,15 +1,9 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {}, src }:
 
-pkgs.stdenv.mkDerivation rec {
-  pname = "hyprshot";
-  version = "1.2.2";
+pkgs.stdenv.mkDerivation {
+  inherit src;
 
-  src = pkgs.fetchFromGitHub {
-    owner = "Gustash";
-    repo = "Hyprshot";
-    rev = "${version}";
-    sha256 = "sha256-f4fMIS3B01F090Cs3R846HwQsmFvdzx8w3ubPi06S5o=";
-  };
+  name = "hyprshot";
 
   nativeBuildInputs = with pkgs; [
     makeWrapper

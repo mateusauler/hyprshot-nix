@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "hyprshot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686854760,
+        "narHash": "sha256-f4fMIS3B01F090Cs3R846HwQsmFvdzx8w3ubPi06S5o=",
+        "owner": "Gustash",
+        "repo": "Hyprshot",
+        "rev": "9d9df540409f4587a04324aaefec24a7224f83dc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Gustash",
+        "repo": "Hyprshot",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1691472822,
@@ -18,6 +34,7 @@
     },
     "root": {
       "inputs": {
+        "hyprshot": "hyprshot",
         "nixpkgs": "nixpkgs"
       }
     }
