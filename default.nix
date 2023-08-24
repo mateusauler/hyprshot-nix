@@ -23,6 +23,8 @@ pkgs.stdenv.mkDerivation {
         wl-clipboard
         libnotify
         imagemagick
+        # Fix for https://github.com/NixOS/nixpkgs/issues/251261
+        xdg-utils
       ])}
   '';
 }
